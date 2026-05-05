@@ -43,14 +43,8 @@ export class Start extends Phaser.Scene {
 
     catchCat() {
         this.score++;
-
-        // Update screen
-        this.txtScore.setText('Score: ' + this.score);
-
-        // Log to console
+        this.txtScore.setText(this.score);
         console.log('Score:', this.score);
-
-        // Move cat randomly
         this.cat.setPosition(
             Math.random() * this.scale.width,
             Math.random() * this.scale.height
